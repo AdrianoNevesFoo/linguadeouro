@@ -22,6 +22,11 @@ a:hover {
     color: #18BC9C;
     outline: 0
 }
+
+.row h2{
+    text-align: center;
+    padding-top: 20px;
+}
 h1,
 h2,
 h3,
