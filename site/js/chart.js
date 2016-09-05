@@ -1,19 +1,24 @@
-$(function () {
-
-    $('#container').highcharts({
+function draw(id, vector){
+    $(id).highcharts({
 
         chart: {
             polar: true,
-            type: 'line'
+            type: 'line',
+            width: 700,
+            margin: [10, 10, 40, 10]
         },
 
         title: {
-            text: 'Mapa de Habilidades',
+            text: '',
             x: -80
         },
 
-        pane: {
-            size: '80%'
+        exporting: {
+            enabled: false,
+        },
+
+        credits: {
+            enabled: false,
         },
 
         xAxis: {
@@ -35,15 +40,14 @@ $(function () {
         },
 
         legend: {
-            align: 'right',
-            verticalAlign: 'top',
-            y: 70,
-            layout: 'vertical'
+            align: 'center',
+            verticalAlign: 'bottom',
+            width: 500
         },
 
         series: [{
             name: 'Habilidades do jogador',
-            data: [70000, 30000, 45000, 45000, 50000, 50000],
+            data: vector,
             pointPlacement: 'on'
         }, {
             name: 'Medida máxima de referência',
@@ -52,4 +56,18 @@ $(function () {
         }]
 
     });
+}
+$(document).ready(function () {
+    draw("#chartBijay", [10000, 10000, 10000, 10000, 10000, 10000]);
+    draw("#chartNeylor", [10000, 10000, 10000, 10000, 10000, 10000]);
+    draw("#chartThales", [10000, 10000, 10000, 10000, 10000, 10000]);
+    draw("#chartWescley", [10000, 10000, 10000, 10000, 10000, 10000]);
+    draw("#chartTiago", [10000, 10000, 10000, 10000, 10000, 10000]);
+    draw("#chartDenis", [10000, 10000, 10000, 10000, 10000, 10000]);
+    draw("#chartJe", [10000, 10000, 10000, 10000, 10000, 10000]);
+    draw("#chartRodrigo", [10000, 10000, 10000, 10000, 10000, 10000]);
+    draw("#chartFabio", [10000, 10000, 10000, 10000, 10000, 10000]);
+    draw("#chartRicardo", [10000, 10000, 10000, 10000, 10000, 10000]);
+
+
 });
